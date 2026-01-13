@@ -19,8 +19,7 @@ b = float(b)
 
 e_0 = "No se puede realizar esta operación si b = 0"
 
-op = int(
-    input(
+op = input(
         "1 = +\n"
         "2 = -\n"
         "3 = *\n"
@@ -30,7 +29,10 @@ op = int(
         "7 = //\n"
         "Ingrese la operación que desea realizar: "
     )
-)
+if op.isalpha() or op.isspace or op == "":
+    op = input("ingrese un valor que no sea un str o vacio= ")
+
+op = int(op)
 
 if op < 1 or op > 7:
     print("ESTE NÚMERO NO CORRESPONDE A NINGUNA OPERACIÓN DEL SISTEMA")
